@@ -1,0 +1,20 @@
+{
+  "name": "auth_service",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "python manage.py runserver",
+        "cwd": "apps/auth_service"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo 'Django does not require a build step'",
+        "cwd": "apps/auth_service"
+      }
+    }
+  },
+  "tags": []
+}

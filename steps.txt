@@ -1,0 +1,9 @@
+1. created a project with: npx create-nx-workspace@latest project-social
+select the react and next app and installed it by default
+2. nx add @nx/nest          # installs the Nest plugin
+3.Crate a nest-chat-backend service: nx g @nx/nest:app --name=chat-service --directory=apps/chat-service
+4.manually create a auth-service since it uses django by
+cd apps
+django-admin startproject auth_service
+5. add a project.json file in apps/django-auth/project.json:
+6.In your root nx.json  add the Django project manually under projects:

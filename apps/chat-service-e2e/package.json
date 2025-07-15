@@ -1,0 +1,27 @@
+{
+  "name": "@project-social/chat-service-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "chat-service-e2e",
+    "implicitDependencies": [
+      "chat-service"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/chat-service-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "chat-service:build",
+          "chat-service:serve"
+        ]
+      }
+    }
+  }
+}
